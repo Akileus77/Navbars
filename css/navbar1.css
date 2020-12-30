@@ -40,6 +40,9 @@
     color:white; 
     text-shadow: 2px 3px 4px black;
 }
+.nav-item-effected:hover{
+    text-shadow: none;
+}
 .nav-item{
     text-decoration: none;
     float:left;
