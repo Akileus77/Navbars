@@ -13,8 +13,8 @@
     .nav{
         width: 100%;
         background-color: black;
-      display: flex;
-      justify-content:flex-start;
+        display: flex;
+        justify-content:flex-start;
         }  
     .nav-item{
         position: relative;
@@ -24,6 +24,7 @@
         text-decoration: none;
         color:white;
         margin-left:20px;
+        flex-direction: none;
     }
     .nav-item::before{
       content: '';
@@ -59,4 +60,57 @@
     .brand:hover{
         background-color: #353535;
         text-shadow: 2px 3px 6px black;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .nav{
+        width: 100%;
+        background-color: black;
+        display: flow-root;
+   
+        }  
+      .nav-item{
+        position: static;
+        padding: 10px;
+        padding-top: 10px;
+        display: flex;
+        float:Left;
+        text-decoration: none;
+        color:white;
+        width: 90%;
+      
+    }
+    .brand{
+      float:center;
+      display: block;
+      padding: 3px;
+      font-size: 27px;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: 'Oswald', sans-serif;
+      margin-left:10px;
+      width: 90%;
+  }
+  .nav-item::before{
+    content: '';
+    background-color: #48b926;
+    width: 50%;
+    height: 2px;
+    position: absolute;
+    bottom:initial;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: .7s ease-in-out;
+
+  }
+  .nav-item:hover{
+      background-color: #353535;
+  }
+  .nav-item:hover::before{
+    transform: scale(1);
+  }
+  .nav.to-left a::before{
+    transform-origin: bottom;
+  }
     }
