@@ -59,3 +59,6 @@
  .text-white{
     color:white;
  }
+ .empty{
+     height: 100vh;
+ }
